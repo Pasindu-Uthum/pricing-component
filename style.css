@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 350px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background-color: #f6f6fe;
+}
+
+body img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px 0;
+  color: #6d708d;
+}
+
+section .toggle-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .toggle-button-container span {
+  display: inline-block;
+  padding: 0 20px;
+  color: #b3b5c6;
+}
+
+section .toggle-button-container .toggle-btn {
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  width: 45px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+section .toggle-button-container .toggle-btn:hover {
+  background: #a3a8f0;
+}
+
+section .toggle-button-container .toggle-btn .circle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes toggle {
+  from {
+    left: 3px;
+  }
+  to {
+    left: 22px;
+  }
+}
+
+@keyframes toggle {
+  from {
+    left: 3px;
+  }
+  to {
+    left: 22px;
+  }
+}
+
+@-webkit-keyframes current {
+  from {
+    left: 22px;
+  }
+  to {
+    left: 3px;
+  }
+}
+
+@keyframes current {
+  from {
+    left: 22px;
+  }
+  to {
+    left: 3px;
+  }
+}
+
+.price-grid-view {
+  width: 1100px;
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+}
+
+.price-grid-view .price-box {
+  background-color: white;
+  margin: 30px 0;
+  padding: 30px;
+}
+
+.price-grid-view .price-box:nth-child(1) {
+  border-radius: 20px 0 0 20px;
+  -webkit-box-shadow: 0px 0px 15px #b3b5c6;
+          box-shadow: 0px 0px 15px #b3b5c6;
+}
+
+.price-grid-view .price-box:nth-child(3) {
+  border-radius: 0 20px 20px 0;
+  -webkit-box-shadow: 0px 0px 20px #b3b5c6;
+          box-shadow: 0px 0px 20px #b3b5c6;
+}
+
+.price-grid-view .price-box:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+  border-radius: 20px;
+  margin: 0;
+  padding: 60px 30px;
+}
+
+.price-grid-view .price-box:nth-child(2) h1,
+.price-grid-view .price-box:nth-child(2) span,
+.price-grid-view .price-box:nth-child(2) p {
+  color: white;
+}
+
+.price-grid-view .price-box:nth-child(2) hr {
+  border-color: white;
+  opacity: 0.6;
+}
+
+.price-grid-view .price-box:nth-child(2) button {
+  background: white;
+  color: #696fdd;
+}
+
+.price-grid-view .price-box:nth-child(2) button:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.price-grid-view .price-box span {
+  display: block;
+  text-align: center;
+  color: #6d708d;
+}
+
+.price-grid-view .price-box h1 {
+  font-size: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 15px;
+  color: #494c5f;
+  margin-bottom: 20px;
+}
+
+.price-grid-view .price-box h1 span {
+  display: inline-block;
+  font-size: 3rem;
+  color: #494c5f;
+  padding-right: 10px;
+}
+
+.price-grid-view .price-box hr {
+  opacity: 0.2;
+}
+
+.price-grid-view .price-box p {
+  color: #6d708d;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 15px;
+}
+
+.price-grid-view .price-box button {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+  padding: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 5px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  border: 2px solid white;
+}
+
+.price-grid-view .price-box button:hover {
+  cursor: pointer;
+  color: #696fdd;
+  background: white;
+  border-color: #6d708d;
+}
+
+@media screen and (max-width: 1114px) {
+  .price-grid-view {
+    width: 95%;
+  }
+  .price-grid-view .price-box h1 {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow: auto;
+    height: auto;
+  }
+  .price-grid-view {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: 3;
+        grid-template-rows: 3;
+  }
+  .price-grid-view .price-box:nth-child(1), .price-grid-view .price-box:nth-child(2), .price-grid-view .price-box:nth-child(3) {
+    border-radius: 20px;
+  }
+  .price-grid-view .price-box h1 {
+    font-size: 4.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
